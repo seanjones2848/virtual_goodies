@@ -1,5 +1,5 @@
 (function() {
-    Script.include("../../../developer/libraries/utils.js");
+    //Script.include("../../../developer/libraries/utils.js");
     var _this;
     var TRIGGER_CONTROLS = [
         Controller.Standard.LT,
@@ -9,7 +9,7 @@
     var TIMESCALE = 0.03;
     var ACTION_TTL = 10;    
 
-    function MagicWand() {
+    MagicWand = function() {
         _this = this;
         _this.launchSound = SoundCache.getSound("https://s3-us-west-1.amazonaws.com/hifi-content/eric/Sounds/missle+launch.wav");
         _this.explosionSound = SoundCache.getSound("https://s3-us-west-1.amazonaws.com/hifi-content/eric/Sounds/fireworksExplosion.wav");
