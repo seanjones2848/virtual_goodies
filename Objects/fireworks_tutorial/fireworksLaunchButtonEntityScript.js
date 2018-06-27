@@ -1,5 +1,5 @@
 (function() {
-    Script.include("../../developer/libraries/utils.js");
+    Script.include("../../../developer/libraries/utils.js");
     var _this;
     Fireworks = function() {
         _this = this;
