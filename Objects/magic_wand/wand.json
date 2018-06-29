@@ -4,7 +4,7 @@
         {
             "clientOnly": false,
             "collisionsWillMove": true,
-            "created": "2018-06-29T17:27:36Z",
+            "created": "2018-06-29T18:17:50Z",
             "dimensions": {
                 "x": 0.018000001087784767,
                 "y": 0.32999998331069946,
@@ -16,29 +16,37 @@
                 "y": -9.800000190734863,
                 "z": 0
             },
-            "id": "{2cc69e54-43f6-4fbf-806a-d115e479f192}",
-            "lastEdited": 1530293248647200,
-            "lastEditedBy": "{6e2e41ee-6ef6-4a27-9b0b-c2786add4575}",
+            "id": "{90c40d64-479d-45d9-b31d-39d81103c494}",
+            "lastEdited": 1530296295792443,
+            "lastEditedBy": "{8a8206fc-df61-4ae6-b4d7-8c619d2df2e0}",
             "modelURL": "file:///C:/Program Files/High Fidelity/scripts/virtual_goodies/Objects/magic_wand/magic_wand.fbx",
             "name": "magic-wand",
             "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "parentID": "{00000000-0000-0000-0000-000000000001}",
+            "parentJointIndex": 21,
+            "parentJointName": "RightHand",
+            "position": {
+                "x": 0.1177130937576294,
+                "y": 0.12922893464565277,
+                "z": 0.08307232707738876
+            },
             "queryAACube": {
-                "scale": 0.3309803605079651,
-                "x": -0.16549018025398254,
-                "y": -0.16549018025398254,
-                "z": -0.16549018025398254
+                "scale": 0.9929410815238953,
+                "x": 332.40234375,
+                "y": 0.0062660276889801025,
+                "z": 2.3858513832092285
             },
             "rotation": {
-                "w": 1,
-                "x": -1.52587890625e-05,
-                "y": -1.52587890625e-05,
-                "z": -1.52587890625e-05
+                "w": -0.46645301580429077,
+                "x": 0.4934614896774292,
+                "y": 0.36058592796325684,
+                "z": 0.6394598484039307
             },
             "script": "file:///C:/Program Files/High Fidelity/scripts/virtual_goodies/Objects/magic_wand/magicWandEntityScript.js",
             "type": "Model",
             "userData": "{\"grabbableKey\":{\"grabbable\":true,\"invertSolidWhileHeld\":true,\"wantsTrigger\":true},\"wearable\":{\"joints\":{\"RightHand\":[{\"x\":0.1177130937576294,\"y\":0.12922893464565277,\"z\":0.08307232707738876},{\"x\":0.4934672713279724,\"y\":0.3605862259864807,\"z\":0.6394805908203125,\"w\":-0.4664038419723511}],\"LeftHand\":[{\"x\":0.09151676297187805,\"y\":0.13639454543590546,\"z\":0.09354984760284424},{\"x\":-0.19628101587295532,\"y\":0.6418180465698242,\"z\":0.2830369472503662,\"w\":0.6851521730422974}]}}}"
         }
     ],
-    "Id": "{3739ebe5-e50c-4265-aa6d-be0ccc19ee36}",
+    "Id": "{80c1f55a-ff37-48dc-aafa-99e6a1802344}",
     "Version": 87
 }
