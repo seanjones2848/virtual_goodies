@@ -1,6 +1,5 @@
 (function() {
     Script.include("../../../developer/libraries/utils.js");
-    print("we in the scripty!!!")
     var _this;
     var TRIGGER_CONTROLS = [
         Controller.Standard.LT,
@@ -57,7 +56,6 @@
             return WandTipPosition;
         },
         startEquip: function(entityID, args) {
-            print("beginning to equip");
             this.hand = args[0] == "left" ? 0 : 1;
         },
         continueEquip: function(entityID, args) {
@@ -67,7 +65,6 @@
             this.checkTriggerPressure(this.hand);
         },
         releaseEquip: function(entityID, args) {
-            print("let go");
             var _this = this;
             this.canFireTimeout = Script.setTimeout(function() {
                 _this.canFire = false;
@@ -79,14 +76,12 @@
                 this.canFire = true;
             } else if (this.triggerValue >= RELOAD_THRESHOLD && this.canFire === true) {
                 var wandProps = Entities.getEntityProperties(this.entityID, ["position", "rotation"]);
-                print("firing");
                 this.shootFire(wandProps);
                 this.canFire = false;
             }
             return (triggerState && (oldTriggerState != triggerState));
         },
         explode: function(explodePosition) {
-            print("wand: exploding");
             Audio.playSound(_this.explosionSound, {
                 position: explodePosition
             });
@@ -147,12 +142,11 @@
             }, 1000);
         },
         shootFire: function(wandProps) {
-            print("wand: shooting the fireball");
             var forwardVec = Quat.getForward(Quat.multiply(wandProps.rotation, Quat.fromPitchYawRollDegrees(0, 180, 0)))
             forwardVec = Vec3.multiply(Vec3.normalize(forwardVec), FIREBALL_FORCE);
             Audio.playSound(_this.launchSound, {
                 position: wandProps.position,
-                volume: 0.5
+                volume: 0.3
             });
             var fireball = Entities.addEntity({
                 name: "fireball",
@@ -164,16 +158,11 @@
                     blue: 0
                 },
                 dimensions: {
-                    x: 0.05,
-                    y: 0.05,
-                    z: 0.05
+                    x: 0.04,
+                    y: 0.04,
+                    z: 0.04
                 },
                 damping: 0.4,
-                //gravity: {
-                //    x: 0,
-                //    y: -4.8,
-                //    z: 0
-                //},
                 restitution: 0.6,
                 dynamic: true,
                 rotation: wandProps.rotation,
@@ -215,11 +204,14 @@
                 alphaFinish: 0,
                 textures: "https://hifi-public.s3.amazonaws.com/alan/Particles/Particle-Sprite-Smoke-1.png",
                 emitterShouldTrail: true,
-                parent: fireball,
+                parentID: fireball,
             });
             Script.setTimeout(function() {
                 var explodePosition = Entities.getEntityProperties(fireball, "position").position;
                 _this.explode(explodePosition);
+                Entities.editEntity(smoke, {
+                    isEmitting: false
+                });
             }, TIME_TO_EXPLODE);
         },      
     };
