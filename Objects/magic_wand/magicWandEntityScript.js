@@ -142,8 +142,9 @@
             }, 1000);
         },
         shootFire: function(wandProps) {
-            var forwardVec = Quat.getForward(Quat.multiply(wandProps.rotation, Quat.fromPitchYawRollDegrees(0, 180, 0)))
-            forwardVec = Vec3.multiply(Vec3.normalize(forwardVec), FIREBALL_FORCE);
+            var upVec = Quat.getUp(Quat.multiply(wandProps.rotation, Quat.fromPitchYawRollDegrees(0, 180, 0)))
+            //var upVec = Quat.getForward(wandProps.rotation)
+            upVec = Vec3.multiply(Vec3.normalize(upVec), FIREBALL_FORCE);
             Audio.playSound(_this.launchSound, {
                 position: wandProps.position,
                 volume: 0.3
@@ -167,7 +168,7 @@
                 dynamic: true,
                 rotation: wandProps.rotation,
                 position: this.getWandTipPosition(wandProps),
-                velocity: forwardVec,
+                velocity: upVec,
                 lifetime: 10
             });
             var smoke = Entities.addEntity({
@@ -209,6 +210,9 @@
             Script.setTimeout(function() {
                 var explodePosition = Entities.getEntityProperties(fireball, "position").position;
                 _this.explode(explodePosition);
+                Entities.editEntity(fireball, {
+                    visible: false
+                })
                 Entities.editEntity(smoke, {
                     isEmitting: false
                 });
