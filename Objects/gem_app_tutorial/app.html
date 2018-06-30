@@ -65,6 +65,11 @@
                 background-color: #afafaf;
                 background: linear-gradient(#fff 20%, #afafaf 100%);
             }
+            input[type=button].green {
+                color: #121212;
+                background-color: #50c878;
+                background: linear-gradient(#0f0 20%, #50c878 100%);
+            }
 
             input[type=button]:enabled:hover {
                 background: linear-gradient(#000, #000);
@@ -82,6 +87,10 @@
                 background: linear-gradient(#fff, #fff);
                 border: none;
             }
+            input[type=button].green:enabled:hover {
+                background: linear-gradient(#0f0, #0f0);
+                border: none;
+            }
 
             input[type=button]:active {
                 background: linear-gradient(#343434, #343434);
@@ -94,6 +103,9 @@
             }
             input[type=button].white:active {
                 background: linear-gradient(#afafaf, #afafaf);
+            }
+            input[type=button].green:active {
+                background: linear-gradient(#50c878, #50c878);
             }
 
             input[type=button]:disabled {
@@ -114,10 +126,10 @@
         <div class="content">
             <h4>Pick a gemstone:</h4>
             <p>Each button produces a different stone</p>
-            <p><input type="button" value="Button"></p>
-            <p><input type="button" class="white" value="Button"></p>
-            <p><input type="button" class="red" value="Button"></p>
-            <p><input type="button" class="blue" value="Button"></p>
+            <p><input type="button" class="gemstone-button green" value="Emerald"></p>
+            <p><input type="button" class="gemstone-button red" value="Ruby"></p>
+            <p><input type="button" class="gemstone-button blue" value="Sapphire"></p>
+            <p><input type="button" class="gemstone-button white" value="Quartz"></p>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -125,16 +137,16 @@
             function main() {
                 console.log("ready");
                 var readyEvent = {
-                    "type":"ready",
+                    "type": "ready",
                 };
                 EventBridge.emitWebEvent(JSON.stringify(readyEvent));
                 $(".gemstone-button").click(function() {
-                    console.log(this.value + "button click");
+                    console.log(this.value + " button click");
                     var clickEvent = {
                         "type": "click",
                         "data": this.value
                     };
-                    EventBridge.emitWebEvent(JSON.stingify(clickEvent));
+                    EventBridge.emitWebEvent(JSON.stringify(clickEvent));
                 });
             }
             $(document).ready(main);

@@ -13,6 +13,9 @@
     button.clicked.connect(onClicked);
     function onWebEventReceived(event) {
         print("gemstoneApp.js recieved a web event: " + event);
+        if (typeof event === "string") {
+            event = JSON.parse(event);
+        }
         if (event.type === "click") {
             var props = {
                 type: "Shape",
@@ -36,7 +39,6 @@
                     y: 0.2,
                     z: 0.2
                 };
-                Entities.addEntity(props);
             } else if (event.data === "Ruby") {
                 props.name = "Ruby";
                 props.shape = "Octagon";
@@ -50,7 +52,6 @@
                     y: 0.2,
                     z: 0.2
                 };
-                Entities.addEntity(props);
             } else if (event.data === "Sapphire") {
                 props.name = "Sapphire";
                 props.shape = "Icosahedron";
@@ -64,7 +65,6 @@
                     y: 0.2,
                     z: 0.2
                 };
-                Entities.addEntity(props);
             } else if (event.data === "Quartz") {
                 props.name = "Quartz";
                 props.shape = "Octahedron";
@@ -77,14 +77,14 @@
                     x: 0.2,
                     y: 0.2,
                     z: 0.2
-                };
-                Entities.addEntity(props);
+                };    
             }
+            Entities.addEntity(props);
         }
     }
-    tablet.webEventReceived(onWebEventReceived);
+    tablet.webEventReceived.connect(onWebEventReceived);
     function getPositionToCreateEntity() {
-        var direction = Quat.getFoorward(MyAvatar.orientation);
+        var direction = Quat.getForward(MyAvatar.orientation);
         var distance = 0.3;
         var position = Vec3.sum(MyAvatar.position, Vec3.multiply(direction, distance));
         position.y += 0.5;
