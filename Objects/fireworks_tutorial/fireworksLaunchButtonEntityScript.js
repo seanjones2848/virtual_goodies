@@ -1,10 +1,12 @@
 (function() {
     Script.include("../../../developer/libraries/utils.js");
     var _this;
-    Fireworks = function() {
+    var Fireworks = function() {
         _this = this;
-        _this.launchSound = SoundCache.getSound("https://s3-us-west-1.amazonaws.com/hifi-content/eric/Sounds/missle+launch.wav");
-        _this.explosionSound = SoundCache.getSound("https://s3-us-west-1.amazonaws.com/hifi-content/eric/Sounds/fireworksExplosion.wav");
+        _this.launchSound = SoundCache.getSound(
+            "https://s3-us-west-1.amazonaws.com/hifi-content/eric/Sounds/missle+launch.wav");
+        _this.explosionSound = SoundCache.getSound(
+            "https://s3-us-west-1.amazonaws.com/hifi-content/eric/Sounds/fireworksExplosion.wav");
         _this.TIME_TO_EXPLODE = 3000;
     };
 
@@ -31,7 +33,7 @@
             var smoke = Entities.addEntity({
                 type: "ParticleEffect",
                 position: _this.position,
-                velocity: {x: 0, y: 3, z:0},
+                velocity: {x: 0, y: 3, z: 0},
                 lifespan: 10,
                 lifetime: 20,
                 isEmmiting: true,
@@ -63,7 +65,7 @@
                 alphaStart: 0.7,
                 alphaFinish: 0,
                 textures: "https://hifi-public.s3.amazonaws.com/alan/Particles/Particle-Sprite-Smoke-1.png",
-                emitterShouldTrail: true,
+                emitterShouldTrail: true
             });
 
             Script.setTimeout(function() {
@@ -73,19 +75,19 @@
         },
  
         explodeFirework: function(explodePosition) {
-             Audio.playSound(_this.explosionSound, {
-                 position: explodePosition
-             });
-             var firework = Entities.addEntity({
-                 name: "fireworks emitter",
-                 position: explodePosition,
-                 type: "ParticleEffect",
-                 colorStart: hslToRgb({
-                     h: Math.random(),
-                     s: 0.5,
-                     l: 0.7
-                 }),
-                 color: hslToRgb({
+            Audio.playSound(_this.explosionSound, {
+                position: explodePosition
+            });
+            var firework = Entities.addEntity({
+                name: "fireworks emitter",
+                position: explodePosition,
+                type: "ParticleEffect",
+                colorStart: hslToRgb({
+                    h: Math.random(),
+                    s: 0.5,
+                    l: 0.7
+                }),
+                color: hslToRgb({
                     h: Math.random(),
                     s: 0.5,
                     l: 0.5
@@ -125,19 +127,19 @@
                 alphaStart: randFloat(0.7, 1.0),
                 alphaFinish: randFloat(0.7, 1.0),
                 textures: "http://ericrius1.github.io/PlatosCave/assets/star.png",
-             });
+            });
 
-             Script.setTimeout(function() {
-                 Entities.editEntity(firework, {
-                     isEmitting: false
-                 });
-             }, 1000);
+            Script.setTimeout(function() {
+                Entities.editEntity(firework, {
+                    isEmitting: false
+                });
+            }, 1000);
         },
 
         preload: function(entityID) {
             _this.entityID = entityID;
             _this.position = Entities.getEntityProperties(_this.entityID, "position").position;
-        },
+        }
     };
     return new Fireworks();
 });

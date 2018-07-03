@@ -3,11 +3,12 @@
     var _this;
     var TRIGGER_CONTROLS = [
         Controller.Standard.LT,
-        Controller.Standard.RT,
+        Controller.Standard.RT
     ];
     var triggerState = false;
     var launchSound = SoundCache.getSound("https://s3-us-west-1.amazonaws.com/hifi-content/eric/Sounds/missle+launch.wav");
-    var explosionSound = SoundCache.getSound("https://s3-us-west-1.amazonaws.com/hifi-content/eric/Sounds/fireworksExplosion.wav");
+    var explosionSound = SoundCache.getSound(
+        "https://s3-us-west-1.amazonaws.com/hifi-content/eric/Sounds/fireworksExplosion.wav");
     var TIME_TO_EXPLODE = 3000;
     var RELOAD_THRESHOLD = 0.9;
     var FIREBALL_FORCE = 10;
@@ -16,7 +17,7 @@
     function MagicWand() {
         _this = this;
         return;
-    };
+    }
 
     MagicWand.prototype = {
         hand: null,
@@ -27,13 +28,13 @@
             this.entityID = entityID;
             this.launchSound = launchSound;
             this.explosionSound = explosionSound;
-            //this.createTipEntity(entityID);
+            // this.createTipEntity(entityID);
         },
         createTipEntity: function(entityID) {
-            //for debugging where the tip is
+            // for debugging where the tip is
             var wandProps = Entities.getEntityProperties(this.entityID, ["position", "rotation"]);
 
-            var tip = Entities.addEntity({
+            Entities.addEntity({
                 name: "WandTip",
                 dimensions: {
                     x: 0.02,
@@ -47,7 +48,7 @@
                 },
                 type: "Box",
                 parentID: entityID,
-                position: this.getWandTipPosition(wandProps),
+                position: this.getWandTipPosition(wandProps)
             });
         },
         getWandTipPosition: function(wandProps) {
@@ -56,7 +57,7 @@
             return WandTipPosition;
         },
         startEquip: function(entityID, args) {
-            this.hand = args[0] == "left" ? 0 : 1;
+            this.hand = args[0] === "left" ? 0 : 1;
         },
         continueEquip: function(entityID, args) {
             if (this.canFireTimeout !== null) {
@@ -66,9 +67,10 @@
         },
         releaseEquip: function(entityID, args) {
             var _this = this;
+            var FIRE_TIMEOUT = 250;
             this.canFireTimeout = Script.setTimeout(function() {
                 _this.canFire = false;
-            }, 250);
+            }, FIRE_TIMEOUT);
         },
         checkTriggerPressure: function(hand) {
             this.triggerValue = Controller.getValue(TRIGGER_CONTROLS[hand]);
@@ -79,7 +81,7 @@
                 this.shootFire(wandProps);
                 this.canFire = false;
             }
-            return (triggerState && (oldTriggerState != triggerState));
+            return (triggerState);
         },
         explode: function(explodePosition) {
             Audio.playSound(_this.explosionSound, {
@@ -95,55 +97,55 @@
                     l: 0.7
                 }),
                 color: hslToRgb({
-                   h: Math.random(),
-                   s: 0.5,
-                   l: 0.5
-               }),
-               colorFinish: hslToRgb({
-                   h: Math.random(),
-                   s: 0.5,
-                   l: 0.7
-               }),
-               maxParticles: 10000,
-               lifetime: 20,
-               lifespan: randFloat(1.5, 3),
-               emitRate: randInt(500, 5000),
-               emitSpeed: randFloat(0.5, 2),
-               speedSpread: 0.2,
-               emitOrientation: Quat.fromPitchYawRollDegrees(randInt(0, 360), randInt(0, 360), randInt(0, 360)),
-               polarStart: 1,
-               polarFinish: randFloat(1.2, 3),
-               azimuthStart: -Math.PI,
-               azimuthFinish: Math.PI,
-               emitAcceleration: {
-                   x: 0,
-                   y: randFloat(-1, -0.2),
-                   z: 0
-               },
-               accelerationSpread: {
-                   x: Math.random(),
-                   y: 0,
-                   z: Math.random()
-               },
-               particleRadius: randFloat(0.001, 0.1),
-               radiusSpread: Math.random() * 0.1,
-               radiusStart: randFloat(0.001, 0.1),
-               radiusFinish: randFloat(0.001, 0.1),
-               alpha: randFloat(0.8, 1.0),
-               alphaSpread: randFloat(0.1, 0.2),
-               alphaStart: randFloat(0.7, 1.0),
-               alphaFinish: randFloat(0.7, 1.0),
-               textures: "http://ericrius1.github.io/PlatosCave/assets/star.png",
+                    h: Math.random(),
+                    s: 0.5,
+                    l: 0.5
+                }),
+                colorFinish: hslToRgb({
+                    h: Math.random(),
+                    s: 0.5,
+                    l: 0.7
+                }),
+                maxParticles: 10000,
+                lifetime: 20,
+                lifespan: randFloat(1.5, 3),
+                emitRate: randInt(500, 5000),
+                emitSpeed: randFloat(0.5, 2),
+                speedSpread: 0.2,
+                emitOrientation: Quat.fromPitchYawRollDegrees(randInt(0, 360), randInt(0, 360), randInt(0, 360)),
+                polarStart: 1,
+                polarFinish: randFloat(1.2, 3),
+                azimuthStart: -Math.PI,
+                azimuthFinish: Math.PI,
+                emitAcceleration: {
+                    x: 0,
+                    y: randFloat(-1, -0.2),
+                    z: 0
+                },
+                accelerationSpread: {
+                    x: Math.random(),
+                    y: 0,
+                    z: Math.random()
+                },
+                particleRadius: randFloat(0.001, 0.1),
+                radiusSpread: Math.random() * 0.1,
+                radiusStart: randFloat(0.001, 0.1),
+                radiusFinish: randFloat(0.001, 0.1),
+                alpha: randFloat(0.8, 1.0),
+                alphaSpread: randFloat(0.1, 0.2),
+                alphaStart: randFloat(0.7, 1.0),
+                alphaFinish: randFloat(0.7, 1.0),
+                textures: "http://ericrius1.github.io/PlatosCave/assets/star.png",
             });
+            var FIREWORK_TIMEOUT = 1000;
             Script.setTimeout(function() {
                 Entities.editEntity(firework, {
                     isEmitting: false
                 });
-            }, 1000);
+            }, FIREWORK_TIMEOUT);
         },
         shootFire: function(wandProps) {
-            var upVec = Quat.getUp(Quat.multiply(wandProps.rotation, Quat.fromPitchYawRollDegrees(0, 180, 0)))
-            //var upVec = Quat.getForward(wandProps.rotation)
+            var upVec = Quat.getUp(Quat.multiply(wandProps.rotation, Quat.fromPitchYawRollDegrees(0, 180, 0)));
             upVec = Vec3.multiply(Vec3.normalize(upVec), FIREBALL_FORCE);
             Audio.playSound(_this.launchSound, {
                 position: wandProps.position,
@@ -164,7 +166,7 @@
                     z: 0.04
                 },
                 damping: 0.4,
-                restitution: 0.6,
+                restitution: 0.8,
                 dynamic: true,
                 rotation: wandProps.rotation,
                 position: this.getWandTipPosition(wandProps),
@@ -205,19 +207,19 @@
                 alphaFinish: 0,
                 textures: "https://hifi-public.s3.amazonaws.com/alan/Particles/Particle-Sprite-Smoke-1.png",
                 emitterShouldTrail: true,
-                parentID: fireball,
+                parentID: fireball
             });
             Script.setTimeout(function() {
                 var explodePosition = Entities.getEntityProperties(fireball, "position").position;
                 _this.explode(explodePosition);
                 Entities.editEntity(fireball, {
                     visible: false
-                })
+                });
                 Entities.editEntity(smoke, {
                     isEmitting: false
                 });
             }, TIME_TO_EXPLODE);
-        },      
+        }      
     };
     return new MagicWand();
 });

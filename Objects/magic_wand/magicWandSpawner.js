@@ -6,23 +6,38 @@ var center = Vec3.sum(Vec3.sum(MyAvatar.position, {
 
 var SCRIPT_URL = Script.resolvePath("magicWandEntityScript.js");
 var MODEL_URL = Script.resolvePath("magic_wand.fbx");
+var COMPOUND_URL = Script.resolvePath("magic_wand.obj");
+var pitch = 60;
+var yaw = 90;
+var rightHandRotation = Quat.fromPitchYawRollDegrees(pitch, yaw, 0);
+var leftHandRotation = Quat.fromPitchYawRollDegrees(-pitch, yaw, 0);
+
 var magicWand = Entities.addEntity({
     type: "Model",
     name: "magic-wand",
     modelURL: MODEL_URL,
+    compoundShapeURL: COMPOUND_URL,
     position: center,
-    dimentions: {
-        x: 1.0,
-        y: 1.0,
-        z: 1.0
+    shapeType: "compound",
+    dynamic: true,
+    collisionsWillMove: true,
+    collisionMask: 31,
+    dimensions: {
+        x: 0.018,
+        y: 0.33,
+        z: 0.018
     },
     gravity: {
         x: 0,
         y: -9.8,
         z: 0
     },
+    velocity: {
+        x: 0,
+        y: 0.1,
+        z: 0
+    },
     script: SCRIPT_URL,
-    dynamic: true,
     userData: JSON.stringify({
         grabbableKey: {
             grabbable: true,
@@ -32,25 +47,17 @@ var magicWand = Entities.addEntity({
         wearable: {
             joints: {
                 RightHand: [{
-                  x: 0.1177130937576294,
-                  y: 0.12922893464565277,
-                  z: 0.08307232707738876
-                }, {
-                  x: 0.4934672713279724,
-                  y: 0.3605862259864807,
-                  z: 0.6394805908203125,
-                  w: -0.4664038419723511
-                }],
+                    x: 0.1,
+                    y: 0.15,
+                    z: 0.02
+                }, rightHandRotation
+                ],
                 LeftHand: [{
-                  x: 0.09151676297187805,
-                  y: 0.13639454543590546,
-                  z: 0.09354984760284424
-                }, {
-                  x: -0.19628101587295532,
-                  y: 0.6418180465698242,
-                  z: 0.2830369472503662,
-                  w: 0.6851521730422974
-                }]
+                    x: -0.1,
+                    y: 0.15,
+                    z: 0.02
+                }, leftHandRotation 
+                ]
             }
         }
     })

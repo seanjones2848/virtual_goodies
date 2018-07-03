@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title>HiFi Tablet App Quick Start Template</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700"" rel="stylesheet">
+        <style>
+            body {
+                margin: 0;
+                width: 100%;
+                font-family: 'Raleway', sans-serif;
+                color: white;
+                background: linear-gradient(#2b2b2b, #0f212e);
+            }
+
+            .top-bar {
+                height: 90px;
+                background: linear-gradient(#2b2b2b, #1e1e1e);
+                font-weight: bold;
+                padding-left: 30px;
+                padding-right: 30px;
+                display: flex;
+                align-items: center;
+                position: fixed;
+                width: 480px;
+                top: 0;
+                z-index: 1;
+            }
+
+            .content {
+                margin-top: 90px;
+                padding: 30px;
+            }
+
+            /* The switch - the box around the slider */
+            .switch {
+                position: relative;
+                display: inline-block;
+                width: 60px;
+                height: 34px;
+            }
+
+            /* Hide default HTML checkbox */
+            .switch input {display:none;}
+
+            /* The slider */
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #ccc;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 26px;
+                width: 26px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+            input:checked + .slider {
+                background-color: #2196F3;
+            }
+
+            input:focus + .slider {
+                box-shadow: 0 0 1px #2196F3;
+            }
+
+            input:checked + .slider:before {
+                -webkit-transform: translateX(26px);
+                -ms-transform: translateX(26px);
+                transform: translateX(26px);
+            }
+
+            /* Rounded sliders */
+                .slider.round {
+                border-radius: 34px;
+            }
+
+            .slider.round:before {
+                border-radius: 50%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="top-bar">
+            <h4>Magic Sticky Shoes</h4>
+        </div>
+        <div class="content">
+            <h4>Do you want to stick to this surface?</h4>
+            <label class="switch">
+                <input type="checkbox" value="Sticky">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            function main() {
+                console.log("ready");
+                var readyEvent = {
+                    "type": "ready",
+                };
+                EventBridge.emitWebEvent(JSON.stringify(readyEvent));
+                $(".switch").change(function() {
+                    console.log(this.value + " slider toggled");
+                    var toggleEvent = {
+                        "type": "toggle",
+                    };
+                    EventBridge.emitWebEvent(JSON.stringify(toggleEvent));
+                });
+            }
+            $(document).ready(main);
+        </script>
+    </body>
+</html>
