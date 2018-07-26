@@ -1,0 +1,54 @@
+{
+    "DataVersion": 0,
+    "Entities": [
+        {
+            "ambientLight": {
+                "ambientIntensity": 0.20000000298023224,
+                "ambientURL": "http://mpassets.highfidelity.com/edb68ceb-59c5-4bf0-afaa-9734db22c5a9-v1/SunStars.jpg"
+            },
+            "ambientLightMode": "enabled",
+            "clientOnly": false,
+            "created": "2018-06-23T05:09:24Z",
+            "dimensions": {
+                "x": 5000,
+                "y": 5000,
+                "z": 5000
+            },
+            "id": "{7d7947cc-5ae2-4538-8698-b0e90cd9d1cd}",
+            "keyLight": {
+                "castShadows": true,
+                "direction": {
+                    "x": 0.5961997509002686,
+                    "y": -0.45399054884910583,
+                    "z": -0.6621468663215637
+                }
+            },
+            "keyLightMode": "enabled",
+            "lastEdited": 1529793205588135,
+            "lastEditedBy": "{b752bacc-9788-4ba9-b965-9af2dcd836c2}",
+            "name": "Sun Stars",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "queryAACube": {
+                "scale": 8660.25390625,
+                "x": -4330.126953125,
+                "y": -4330.126953125,
+                "z": -4330.126953125
+            },
+            "rotation": {
+                "w": 0.8387120962142944,
+                "x": -0.4787518382072449,
+                "y": -0.1455863118171692,
+                "z": 0.21474015712738037
+            },
+            "shapeType": "box",
+            "skybox": {
+                "url": "http://mpassets.highfidelity.com/edb68ceb-59c5-4bf0-afaa-9734db22c5a9-v1/SunStars.jpg"
+            },
+            "skyboxMode": "enabled",
+            "type": "Zone",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        }
+    ],
+    "Id": "{9f361223-bfb2-40ed-b01a-d31774975226}",
+    "Version": 87
+}

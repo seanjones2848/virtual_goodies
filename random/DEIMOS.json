@@ -1,0 +1,71 @@
+{
+    "DataVersion": 0,
+    "Entities": [
+        {
+            "clientOnly": false,
+            "created": "2018-03-30T04:02:16Z",
+            "dimensions": {
+                "x": 3.6888270378112793,
+                "y": 1.933020830154419,
+                "z": 0.009999999776482582
+            },
+            "id": "{ee1459f8-4d01-428b-ab22-3e7afafba2bb}",
+            "lastEdited": 1522382820440753,
+            "lastEditedBy": "{d7e11f1f-ca0e-4614-97ca-330cc88f1873}",
+            "owningAvatarID": "{0912be60-9a9b-4839-8fe3-3c931371c356}",
+            "parentID": "{36c76d9a-8338-4080-8a98-18ae034d400b}",
+            "position": {
+                "x": -0.004467010498046875,
+                "y": 0.11370372772216797,
+                "z": -0.0026585091836750507
+            },
+            "queryAACube": {
+                "scale": 4.164626598358154,
+                "x": 45.850650787353516,
+                "y": -11.757952690124512,
+                "z": 4.00067138671875
+            },
+            "rotation": {
+                "w": 1,
+                "x": 1.52587890625e-05,
+                "y": 1.52587890625e-05,
+                "z": 1.52587890625e-05
+            },
+            "sourceUrl": "https://www.youtube.com/tv#/browse-sets?c=default&resume",
+            "type": "Web",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": false,
+            "created": "2018-03-30T04:02:16Z",
+            "dimensions": {
+                "x": 3.759852170944214,
+                "y": 2.4243721961975098,
+                "z": 0.5560858845710754
+            },
+            "id": "{36c76d9a-8338-4080-8a98-18ae034d400b}",
+            "lastEdited": 1522382832804443,
+            "lastEditedBy": "{d7e11f1f-ca0e-4614-97ca-330cc88f1873}",
+            "modelURL": "http://mpassets.highfidelity.com/8625dfb3-4f8c-4772-b97c-85bf3cfc95f7-v1/DEIMOS_FUSION_HDTV_v1.0.fbx",
+            "name": "DEIMOS FUSION HDTV v1.0",
+            "owningAvatarID": "{0912be60-9a9b-4839-8fe3-3c931371c356}",
+            "queryAACube": {
+                "scale": 4.508137226104736,
+                "x": -2.254068613052368,
+                "y": -2.254068613052368,
+                "z": -2.254068613052368
+            },
+            "rotation": {
+                "w": 1,
+                "x": -1.52587890625e-05,
+                "y": -1.52587890625e-05,
+                "z": -1.52587890625e-05
+            },
+            "shapeType": "static-mesh",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        }
+    ],
+    "Id": "{7fa65eea-3b76-4146-8c81-0bb36c4ab238}",
+    "Version": 85
+}
