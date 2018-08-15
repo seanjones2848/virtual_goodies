@@ -1,15 +1,3 @@
-const float cloudscale = 1.1;
-const float speed = 0.03;
-const float clouddark = 0.5;
-const float cloudlight = 0.3;
-const float cloudcover = 0.2;
-const float cloudalpha = 8.0;
-const float skytint = 0.5;
-const vec3 skycolour1 = vec3(0.2, 0.4, 0.6);
-const vec3 skycolour2 = vec3(0.4, 0.7, 1.0);
-
-const mat2 m = mat2( 1.6,  1.2, -1.2,  1.6 );
-
 vec2 hash( vec2 p ) {
 	p = vec2(dot(p,vec2(127.1,311.7)), dot(p,vec2(269.5,183.3)));
 	return -1.0 + 2.0*fract(sin(p)*43758.5453123);
@@ -29,6 +17,7 @@ float noise( in vec2 p ) {
 }
 
 float fbm(vec2 n) {
+    const mat2 m = mat2( 1.6,  1.2, -1.2,  1.6 );
 	float total = 0.0, amplitude = 0.1;
 	for (int i = 0; i < 7; i++) {
 		total += noise(n) * amplitude;
@@ -41,6 +30,16 @@ float fbm(vec2 n) {
 // -----------------------------------------------
 
 void mainImage( out vec4 fragColor, in vec2 fragCoord ) {
+    const float cloudscale = 1.1;
+	const float speed = 0.03;
+	const float clouddark = 0.5;
+	const float cloudlight = 0.3;
+	const float cloudcover = 0.2;
+	const float cloudalpha = 8.0;
+	const float skytint = 0.5;
+	const vec3 skycolour1 = vec3(0.2, 0.4, 0.6);
+	const vec3 skycolour2 = vec3(0.4, 0.7, 1.0);
+	const mat2 m = mat2( 1.6,  1.2, -1.2,  1.6 );
     vec2 p = fragCoord.xy / iResolution.xy;
 	vec2 uv = p*vec2(iResolution.x/iResolution.y,1.0);    
     float time = iTime * speed;
