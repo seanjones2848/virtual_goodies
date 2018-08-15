@@ -1,0 +1,45 @@
+{
+    "DataVersion": 0,
+    "Entities": [
+        {
+            "clientOnly": false,
+            "color": {
+                "blue": 0,
+                "green": 0,
+                "red": 0
+            },
+            "created": "2018-04-28T23:17:26Z",
+            "dimensions": {
+                "blue": 6.710536479949951,
+                "green": 0.16199028491973877,
+                "red": 9.221811294555664,
+                "x": 9.221811294555664,
+                "y": 0.16199028491973877,
+                "z": 6.710536479949951
+            },
+            "id": "{b8b5697c-9e5d-4cbd-acf8-b616273974bf}",
+            "lastEdited": 1532015458936093,
+            "lastEditedBy": "{231895c9-5ede-4973-b257-cf29433775ec}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "parentJointIndex": 65532,
+            "queryAACube": {
+                "scale": 11.406109809875488,
+                "x": -5.703054904937744,
+                "y": -5.703054904937744,
+                "z": -5.703054904937744
+            },
+            "rotation": {
+                "w": 0.7070878744125366,
+                "x": 1.52587890625e-05,
+                "y": 1.52587890625e-05,
+                "z": 0.7070878744125366
+            },
+            "scriptTimestamp": 1524959188529,
+            "shape": "Cube",
+            "type": "Box",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false},\"ProceduralEntity\":{\"shaderUrl\":\"https://gist.githubusercontent.com/hyperlogic/4bd34d28113502049b34c120d0131fd3/raw/4ab021cf3d71f40acf734a8353a73e4c717ada29/fractal_lines_of_symmetry.glsl\",\"version\":2,\"uniforms\":{}}}"
+        }
+    ],
+    "Id": "{4a69b1eb-6071-48ab-b351-eba700039fb6}",
+    "Version": 91
+}

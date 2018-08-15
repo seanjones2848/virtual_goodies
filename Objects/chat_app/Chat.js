@@ -665,7 +665,7 @@
 
         print("updateSpeechBubble:", "speechBubbleMessage", speechBubbleMessage, "textSize", textSize.width, textSize.height);
 
-        var fudge = 0.02;
+        var fudge = 0.03;
         var width = textSize.width + fudge;
         var height = textSize.height + fudge;
         dimensions = {

@@ -1,0 +1,53 @@
+{
+    "DataVersion": 0,
+    "Entities": [
+        {
+            "clientOnly": false,
+            "compoundShapeURL": "http://mpassets.highfidelity.com/a281bb63-6ef8-4b94-a10f-dba6795f5fb7-v1/magic_wand.obj",
+            "created": "2018-07-31T21:30:37Z",
+            "dimensions": {
+                "blue": 0.018000002950429916,
+                "green": 0.32999998331069946,
+                "red": 0.018000001087784767,
+                "x": 0.018000001087784767,
+                "y": 0.32999998331069946,
+                "z": 0.018000002950429916
+            },
+            "id": "{c5504929-cd7a-45cb-93c0-4ed7f901d6d6}",
+            "lastEdited": 1533073413089295,
+            "lastEditedBy": "{959da180-a884-4be1-a005-87670883acca}",
+            "modelURL": "http://mpassets.highfidelity.com/a281bb63-6ef8-4b94-a10f-dba6795f5fb7-v1/magic_wand.fbx",
+            "name": "magic-wand",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "parentID": "{00000000-0000-0000-0000-000000000001}",
+            "parentJointIndex": 31,
+            "parentJointName": "RightHand",
+            "position": {
+                "blue": 0.019999999552965164,
+                "green": 0.15000000596046448,
+                "red": 0.10000000149011612,
+                "x": 0.10000000149011612,
+                "y": 0.15000000596046448,
+                "z": 0.019999999552965164
+            },
+            "queryAACube": {
+                "scale": 0.9929410815238953,
+                "x": 13.05688190460205,
+                "y": -11.067316055297852,
+                "z": 3.6413192749023438
+            },
+            "rotation": {
+                "w": 0.6122682094573975,
+                "x": 0.3534446954727173,
+                "y": 0.6122682094573975,
+                "z": -0.35393303632736206
+            },
+            "script": "http://mpassets.highfidelity.com/a281bb63-6ef8-4b94-a10f-dba6795f5fb7-v1/magicWandEntityScript.js",
+            "shapeType": "compound",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true,\"invertSolidWhileHeld\":true,\"wantsTrigger\":true},\"wearable\":{\"joints\":{\"RightHand\":[{\"x\":0.1,\"y\":0.15,\"z\":0.02},{\"x\":0.3535533845424652,\"y\":0.6123723983764648,\"z\":-0.3535533845424652,\"w\":0.6123723983764648}],\"LeftHand\":[{\"x\":-0.1,\"y\":0.15,\"z\":0.02},{\"x\":-0.3535533845424652,\"y\":0.6123723983764648,\"z\":0.3535533845424652,\"w\":0.6123723983764648}]}}}"
+        }
+    ],
+    "Id": "{7612ddd3-e898-4b3c-8b6b-874b27be9ac2}",
+    "Version": 91
+}

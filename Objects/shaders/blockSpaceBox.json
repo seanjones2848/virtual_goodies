@@ -1,0 +1,41 @@
+{
+    "DataVersion": 0,
+    "Entities": [
+        {
+            "clientOnly": false,
+            "collisionless": true,
+            "created": "2018-07-30T18:16:36Z",
+            "dimensions": {
+                "blue": 4,
+                "green": 4,
+                "red": 4,
+                "x": 4,
+                "y": 4,
+                "z": 4
+            },
+            "id": "{1e638e56-06c7-46c2-91bc-750bfed92bc1}",
+            "ignoreForCollisions": true,
+            "lastEdited": 1533067324818046,
+            "lastEditedBy": "{ecc784cf-ef8e-4a67-8696-21fccf8ae960}",
+            "name": "blockSpaceBox",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "queryAACube": {
+                "scale": 6.928203105926514,
+                "x": -3.464101552963257,
+                "y": -3.464101552963257,
+                "z": -3.464101552963257
+            },
+            "rotation": {
+                "w": -0.1754024624824524,
+                "x": -1.52587890625e-05,
+                "y": 0.9844968318939209,
+                "z": -1.52587890625e-05
+            },
+            "shape": "Cube",
+            "type": "Box",
+            "userData": "{\n  \"grabbableKey\": {\n    \"grabbable\": false\n  },\n  \"ProceduralEntity\": {\n    \"version\": 2,\n    \"shaderUrl\": \"https://hifi-content.s3.amazonaws.com/samuel/raymarchWindow2.fs\",\n    \"uniforms\": {\n      \"yOffset\": 30\n    }\n  }\n}"
+        }
+    ],
+    "Id": "{d162c542-a47e-4f3e-a39f-ce88d206b339}",
+    "Version": 91
+}

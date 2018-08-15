@@ -5,6 +5,7 @@
         Controller.Standard.LT,
         Controller.Standard.RT
     ];
+    var CONTROL_MAP_PACKAGE = "com.highfidelity.entity.wand.fire";
     var triggerState = false;
     var launchSound = SoundCache.getSound("https://s3-us-west-1.amazonaws.com/hifi-content/eric/Sounds/missle+launch.wav");
     var explosionSound = SoundCache.getSound(
@@ -28,7 +29,20 @@
             this.entityID = entityID;
             this.launchSound = launchSound;
             this.explosionSound = explosionSound;
+            this.turnOnControls();
             // this.createTipEntity(entityID);
+        },
+        turnOnControls: function() {
+            var controls = Controller.newMapping(CONTROL_MAP_PACKAGE);
+            var keyboard = Controller.Hardware.Keyboard;
+
+            controls.from(keyboard.K).to(function (down) {
+                if (down) {
+                    var wandProps = Entities.getEntityProperties(this.entityID, ["position", "rotation"]);
+                    _this.shootFire(wandProps);
+                }
+            });
+            Controller.enableMapping(CONTROL_MAP_PACKAGE);
         },
         createTipEntity: function(entityID) {
             // for debugging where the tip is
@@ -145,12 +159,28 @@
             }, FIREWORK_TIMEOUT);
         },
         shootFire: function(wandProps) {
-            var upVec = Quat.getUp(Quat.multiply(wandProps.rotation, Quat.fromPitchYawRollDegrees(0, 180, 0)));
-            upVec = Vec3.multiply(Vec3.normalize(upVec), FIREBALL_FORCE);
+            print("shootin!");
+            var upVec;
+            var pos;
+            if (!HMD.active) {
+                var center = Vec3.sum(Vec3.sum(MyAvatar.position, {
+                    x: 0,
+                    y: 0, //(MyAvatar.getHeight() / 2.0),
+                    z: 0
+                }), Quat.getForward(Camera.getOrientation()));
+                upVec = Vec3.multiply(FIREBALL_FORCE, Quat.getForward(Camera.getOrientation()));
+                // pos = this.getWandTipPosition(wandProps);
+                pos = center;
+            } else {
+                upVec = Quat.getUp(Quat.multiply(wandProps.rotation, Quat.fromPitchYawRollDegrees(0, 180, 0)));
+                upVec = Vec3.multiply(Vec3.normalize(upVec), FIREBALL_FORCE);
+                pos = this.getWandTipPosition(wandProps);
+            }
             Audio.playSound(_this.launchSound, {
                 position: wandProps.position,
-                volume: 0.3
+                volume: 0.1
             });
+            print("pos: " + JSON.stringify(pos) + "upVec: " + JSON.stringify(upVec));
             var fireball = Entities.addEntity({
                 name: "fireball",
                 shapeType: "sphere",
@@ -169,7 +199,7 @@
                 restitution: 0.8,
                 dynamic: true,
                 rotation: wandProps.rotation,
-                position: this.getWandTipPosition(wandProps),
+                position: pos,
                 velocity: upVec,
                 lifetime: 10
             });
@@ -198,9 +228,9 @@
                     z: 0.01
                 },
                 radiusSpread: 0.03,
-                particleRadius: 0.1,
+                particleRadius: 0.01,
                 radiusStart: 0.02,
-                radiusFinish: 0.1,
+                radiusFinish: 0.05,
                 alpha: 0.1,
                 alphaSpread: 0,
                 alphaStart: 0.7,
@@ -219,7 +249,10 @@
                     isEmitting: false
                 });
             }, TIME_TO_EXPLODE);
-        }      
+        },
+        deletingEntity: function (entityID) {
+            Controller.disableMapping(CONTROL_MAP_PACKAGE);
+        }     
     };
     return new MagicWand();
 });

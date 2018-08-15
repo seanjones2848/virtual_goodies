@@ -1,0 +1,39 @@
+{
+    "DataVersion": 0,
+    "Entities": [
+        {
+            "clientOnly": false,
+            "created": "2018-07-30T17:52:34Z",
+            "dimensions": {
+                "blue": 2,
+                "green": 2,
+                "red": 0.019999999552965164,
+                "x": 0.019999999552965164,
+                "y": 2,
+                "z": 2
+            },
+            "id": "{5bbc6bfb-22fe-47af-a02e-8cd0056bf4b7}",
+            "lastEdited": 1533069418456016,
+            "lastEditedBy": "{ecc784cf-ef8e-4a67-8696-21fccf8ae960}",
+            "name": "dimensionalWindow",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "queryAACube": {
+                "scale": 2.828497886657715,
+                "x": -1.4142489433288574,
+                "y": -1.4142489433288574,
+                "z": -1.4142489433288574
+            },
+            "rotation": {
+                "w": 0.9969482421875,
+                "x": -1.52587890625e-05,
+                "y": 0.07771420478820801,
+                "z": -4.57763671875e-05
+            },
+            "shape": "Cube",
+            "type": "Box",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true},\"ProceduralEntity\":{\"version\":2,\"shaderUrl\":\"https://hifi-content.s3.amazonaws.com/samuel/raymarchWindow.fs\",\"uniforms\":{}}}"
+        }
+    ],
+    "Id": "{d410789d-b835-43ea-804e-2ec24ec98c86}",
+    "Version": 91
+}

@@ -1,0 +1,53 @@
+{
+    "DataVersion": 0,
+    "Entities": [
+        {
+            "clientOnly": false,
+            "collisionsWillMove": true,
+            "color": {
+                "blue": 0,
+                "green": 0,
+                "red": 0
+            },
+            "created": "2018-07-27T18:28:42Z",
+            "dimensions": {
+                "blue": 1.5,
+                "green": 1.5,
+                "red": 1.5,
+                "x": 1.5,
+                "y": 1.5,
+                "z": 1.5
+            },
+            "dynamic": true,
+            "gravity": {
+                "blue": 0,
+                "green": -4.900000095367432,
+                "red": 0,
+                "x": 0,
+                "y": -4.900000095367432,
+                "z": 0
+            },
+            "id": "{7cb84120-c5b1-474e-9ed7-7ecc8ac30ada}",
+            "lastEdited": 1533056273432739,
+            "lastEditedBy": "{a91667d2-63ad-44ca-9c2a-c8300583e7a5}",
+            "name": "FractalSphere",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "queryAACube": {
+                "scale": 2.598076105117798,
+                "x": -1.299038052558899,
+                "y": -1.299038052558899,
+                "z": -1.299038052558899
+            },
+            "rotation": {
+                "w": 0.5065842866897583,
+                "x": -0.11003279685974121,
+                "y": 0.8538795709609985,
+                "z": -0.046189069747924805
+            },
+            "type": "Sphere",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true},\"ProceduralEntity\":{\"shaderUrl\":\"https://gist.githubusercontent.com/hyperlogic/4bd34d28113502049b34c120d0131fd3/raw/4ab021cf3d71f40acf734a8353a73e4c717ada29/fractal_lines_of_symmetry.glsl\",\"version\":2,\"uniforms\":{}}}"
+        }
+    ],
+    "Id": "{0b9efbf7-506e-49cd-b344-4b47ce5dc1f5}",
+    "Version": 91
+}

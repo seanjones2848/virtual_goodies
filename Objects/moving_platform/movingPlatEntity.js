@@ -1,5 +1,5 @@
 (function() {
-    print("plat mover loaded");
+    print("platform mover loaded");
     var _this;
     var back = false;
     var paused = false;

@@ -1,0 +1,73 @@
+{
+    "DataVersion": 0,
+    "Entities": [
+        {
+            "ambientLight": {
+                "ambientIntensity": 0.10000000149011612,
+                "ambientURL": "http://hifi-content.s3.amazonaws.com/caitlyn/scratch/hifi-snap-by-Caitlyn-on-2018-06-15_13-13-35.jpg"
+            },
+            "ambientLightMode": "enabled",
+            "clientOnly": false,
+            "created": "2018-05-06T04:37:59Z",
+            "dimensions": {
+                "blue": 150,
+                "green": 150,
+                "red": 150,
+                "x": 150,
+                "y": 150,
+                "z": 150
+            },
+            "haze": {
+                "hazeColor": {
+                    "blue": 190,
+                    "green": 10,
+                    "red": 255
+                }
+            },
+            "hazeMode": "disabled",
+            "id": "{9a691dbf-a389-416e-a6db-62f63428216e}",
+            "keyLight": {
+                "color": {
+                    "blue": 115,
+                    "green": 7,
+                    "red": 115
+                },
+                "direction": {
+                    "blue": -0.15643449127674103,
+                    "green": -0.9876883625984192,
+                    "red": 0,
+                    "x": 0,
+                    "y": -0.9876883625984192,
+                    "z": -0.15643449127674103
+                }
+            },
+            "keyLightMode": "enabled",
+            "lastEdited": 1532712452208876,
+            "lastEditedBy": "{9f14173f-09d5-41ac-9fcf-6abcd75abf3f}",
+            "marketplaceID": "62ea6ec4-86ac-4dd9-9c87-86de0c280ebd",
+            "name": "Zone_PorangeSky",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "queryAACube": {
+                "scale": 259.8076171875,
+                "x": -129.90380859375,
+                "y": -129.90380859375,
+                "z": -129.90380859375
+            },
+            "rotation": {
+                "w": 1,
+                "x": -1.52587890625e-05,
+                "y": -1.52587890625e-05,
+                "z": -1.52587890625e-05
+            },
+            "shapeType": "box",
+            "skybox": {
+                "url": "https://hifi-public.s3.amazonaws.com/images/SkyboxTextures/CloudyDay1.jpg"
+            },
+            "skyboxMode": "enabled",
+            "type": "Zone",
+            "userData": "{\"ProceduralEntity\":{\"version\":2,\"shaderUrl\":\"http://hifi-content.s3.amazonaws.com/caitlyn/scratch/trippy2.fs?z22221123222222122223212222113221121211211\"}}"
+        }
+    ],
+    "Id": "{1413c87e-692b-4c69-8ac0-86eb8f6e6402}",
+    "Version": 91
+}

@@ -1,0 +1,50 @@
+{
+    "DataVersion": 0,
+    "Entities": [
+        {
+            "ambientLightMode": "enabled",
+            "clientOnly": false,
+            "created": "2018-07-19T20:16:41Z",
+            "dimensions": {
+                "blue": 10.298246383666992,
+                "green": 10.298246383666992,
+                "red": 10.298246383666992,
+                "x": 10.298246383666992,
+                "y": 10.298246383666992,
+                "z": 10.298246383666992
+            },
+            "hazeMode": "disabled",
+            "id": "{1ab7162e-44f7-4681-80d8-7bb33b2d1703}",
+            "keyLight": {
+                "color": {
+                    "blue": 0,
+                    "green": 0,
+                    "red": 0
+                }
+            },
+            "keyLightMode": "enabled",
+            "lastEdited": 1533067542511960,
+            "lastEditedBy": "{ecc784cf-ef8e-4a67-8696-21fccf8ae960}",
+            "name": "dayNightShaderZone",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "queryAACube": {
+                "scale": 17.837085723876953,
+                "x": -8.918542861938477,
+                "y": -8.918542861938477,
+                "z": -8.918542861938477
+            },
+            "rotation": {
+                "w": 0.7387961149215698,
+                "x": -1.52587890625e-05,
+                "y": 0.6739146709442139,
+                "z": -1.52587890625e-05
+            },
+            "shapeType": "box",
+            "skyboxMode": "enabled",
+            "type": "Zone",
+            "userData": "{\"ProceduralEntity\":{\"version\":2,\"shaderUrl\":\"http://mpassets.highfidelity.com/208ba556-d457-4627-bdb1-2185591c7031-v1/omgSkybox.fs\",\"channels\":[\"http://mpassets.highfidelity.com/208ba556-d457-4627-bdb1-2185591c7031-v1/starmap_8k.jpg\",\"http://mpassets.highfidelity.com/208ba556-d457-4627-bdb1-2185591c7031-v1/celestial_grid.jpg\",\"http://mpassets.highfidelity.com/208ba556-d457-4627-bdb1-2185591c7031-v1/constellation_figures.jpg\",\"http://mpassets.highfidelity.com/208ba556-d457-4627-bdb1-2185591c7031-v1/const_boundaries.jpg\"],\"uniforms\":{\"rotationSpeed\":0.01,\"uDayColor\":[0.9,0.7,0.7],\"constellationLevel\":0.03,\"constellationBoundaryLevel\":0,\"gridLevel\":0.01}}}"
+        }
+    ],
+    "Id": "{a4ab6e8b-fe16-48f6-9033-0b63bab93f73}",
+    "Version": 91
+}

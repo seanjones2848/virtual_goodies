@@ -27,22 +27,10 @@ var magicWand = Entities.addEntity({
         y: 0.33,
         z: 0.018
     },
-    gravity: {
-        x: 0,
-        y: -9.8,
-        z: 0
-    },
-    velocity: {
-        x: 0,
-        y: 0.1,
-        z: 0
-    },
     script: SCRIPT_URL,
     userData: JSON.stringify({
         grabbableKey: {
-            grabbable: true,
-            invertSolidWhileHeld: true,
-            wantsTrigger: true
+            grabbable: true
         },
         wearable: {
             joints: {
