@@ -1,0 +1,44 @@
+{
+    "Entities": [
+        {
+            "clientOnly": 1,
+            "collisionsWillMove": 1,
+            "compoundShapeURL": "http://mpassets.highfidelity.com/f03ab3f1-7e87-46ef-a3f0-e362f94a43ea-v1/bow_collision_hull.obj",
+            "created": "2017-05-02T00:20:53Z",
+            "dimensions": {
+                "x": 0.039999999105930328,
+                "y": 1.2999999523162842,
+                "z": 0.20000000298023224
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -4.8000001907348633,
+                "z": 0
+            },
+            "id": "{c21f79c6-93c0-4b6f-a30c-8a4b824c8b78}",
+            "lastEdited": 1493684400915800,
+            "lastEditedBy": "{a9b43a2a-b1e7-4457-96d0-91cb1de85dc4}",
+            "modelURL": "http://mpassets.highfidelity.com/f03ab3f1-7e87-46ef-a3f0-e362f94a43ea-v1/bow-deadly.fbx",
+            "name": "Bow & Arrow",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "queryAACube": {
+                "scale": 1.3159027099609375,
+                "x": -0.65795135498046875,
+                "y": -0.65795135498046875,
+                "z": -0.65795135498046875
+            },
+            "rotation": {
+                "w": 0.9717707633972168,
+                "x": 0.15434503555297852,
+                "y": -0.10475319623947144,
+                "z": -0.14424353837966919
+            },
+            "script": "http://mpassets.highfidelity.com/f03ab3f1-7e87-46ef-a3f0-e362f94a43ea-v1/bow.js",
+            "shapeType": "simple-hull",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true,\"ignoreIK\":false},\"wearable\":{\"joints\":{\"RightHand\":[{\"x\":0.0813,\"y\":0.0452,\"z\":0.0095},{\"x\":-0.3946,\"y\":-0.6604,\"z\":0.4748,\"w\":-0.4275}],\"LeftHand\":[{\"x\":-0.0881,\"y\":0.0259,\"z\":0.0159},{\"x\":0.4427,\"y\":-0.6519,\"z\":0.4592,\"w\":0.4099}]}}}"
+        }
+    ],
+    "Version": 68
+}

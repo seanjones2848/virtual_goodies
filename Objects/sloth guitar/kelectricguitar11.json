@@ -1,0 +1,45 @@
+{
+  "DataVersion": 0,
+  "Entities": [
+    {
+    "id": "{c150386b-9a90-4722-8bd4-88aeba0363ae}",
+    "type": "Model",
+    "created": "2019-01-24T22:51:53Z",
+    "lastEdited": 1548370446939839,
+    "lastEditedBy": "{e94730bb-58e2-44d8-921d-b90d42045be3}",
+    "position": {
+        "x": 0.2666015625,
+        "y": -0.00048828125,
+        "z": 0.1571044921875
+    },
+    "dimensions": {
+        "x": 1.1873819828033447,
+        "y": 0.10660004615783691,
+        "z": 0.46722543239593506
+    },
+    "rotation": {
+        "x": 0.6963642239570618,
+        "y": 0.12278779596090317,
+        "z": 0.12278781086206436,
+        "w": 0.6963642239570618
+    },
+    "name": "Custom wearable",
+    "modelURL": "http://mpassets.highfidelity.com/32687d11-dd44-4381-a447-9bbb8f9d1722-v1/kelectricguitar11.fbx",
+    "parentID": "{00000000-0000-0000-0000-000000000001}",
+    "parentJointIndex": 3,
+    "queryAACube": {
+        "x": 5006.208984375,
+        "y": 5015.55029296875,
+        "z": 4968.71435546875,
+        "scale": 3.841334819793701
+    },
+    "entityHostType": "avatar",
+    "owningAvatarID": "{e94730bb-58e2-44d8-921d-b90d42045be3}",
+    "clientOnly": true,
+    "avatarEntity": true,
+    "localEntity": false
+}
+    ],
+  "Id": "{124e621f-3ce9-44f5-ade3-6986e022a77f}",
+  "Version": 98
+}

@@ -1,0 +1,8 @@
+{
+    "materialVersion": 1,
+    "materials": {
+      "model": "hifi_pbr",
+      "albedoMap": "https://hifi-content.s3.amazonaws.com/sean/forestfloorbody/GroundForest003_COL_VAR1_3K.jpg",
+      "normalMap": "https://hifi-content.s3.amazonaws.com/sean/forestfloorbody/GroundForest003_NRM_3K.jpg"
+    }
+}

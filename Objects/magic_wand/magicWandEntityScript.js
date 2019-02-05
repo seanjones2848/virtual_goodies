@@ -163,9 +163,10 @@
             var upVec;
             var pos;
             if (!HMD.active) {
+                var waist = MyAvatar.getHeight() / 2.0;
                 var center = Vec3.sum(Vec3.sum(MyAvatar.position, {
                     x: 0,
-                    y: 0, //(MyAvatar.getHeight() / 2.0),
+                    y: waist,
                     z: 0
                 }), Quat.getForward(Camera.getOrientation()));
                 upVec = Vec3.multiply(FIREBALL_FORCE, Quat.getForward(Camera.getOrientation()));

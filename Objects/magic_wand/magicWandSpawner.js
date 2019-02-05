@@ -4,6 +4,7 @@ var center = Vec3.sum(Vec3.sum(MyAvatar.position, {
     z: 0
 }), Vec3.multiply(2, Quat.getForward(Camera.getOrientation())));
 
+Script.require.cache[Script.require.resolve('./magicWandEntityScript.js')] = undefined;
 var SCRIPT_URL = Script.resolvePath("magicWandEntityScript.js");
 var MODEL_URL = Script.resolvePath("magic_wand.fbx");
 var COMPOUND_URL = Script.resolvePath("magic_wand.obj");

@@ -37,7 +37,8 @@ var WS = Entities.addEntity({
             uniforms: {
                 timeScale: 0.1
             }
-        }
+        },
+        clientOnly: true
     })
 });
 function cleanup() {
